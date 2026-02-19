@@ -25,8 +25,7 @@ def qr_png_data_uri(payload: str) -> str:
     This is convenient for frontend display without storing binary blobs server-side.
     """
     img: PilImage = qrcode.make(payload)  # type: ignore[assignment]
-    buf = bytearray()
-    # PIL image supports save to bytes via memoryview using BytesIO; keep dependencies minimal.
+    # PIL image supports save to bytes via BytesIO; keep dependencies minimal.
     from io import BytesIO
 
     bio = BytesIO()

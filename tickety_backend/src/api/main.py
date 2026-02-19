@@ -13,9 +13,7 @@ from fastapi import (
     Header,
     HTTPException,
     Request,
-    Response,
     Security,
-    status,
 )
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
@@ -43,6 +41,7 @@ from src.api.schemas import (
     EventCreate,
     LoginRequest,
     Message,
+    Order,
     PaymentIntentResponse,
     PricingTier,
     PricingTierCreate,
